@@ -12,7 +12,6 @@ Enzyme.configure({ adapter: new EnzymeAdapter() });
  */
 
 const setup = (props={}) => {
-    props = { success: true }
     return shallow(<Congrats {...props} />)
 };
 
