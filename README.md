@@ -6,3 +6,5 @@
 
 ``npm install --save prop-types``
 ``npm install --save-dev check-prop-types``
+
+<img width="550" alt="Screen Shot" src="https://user-images.githubusercontent.com/34965292/97816464-5f7b3600-1c4a-11eb-81ea-16dbb20c7cf6.png">
