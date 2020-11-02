@@ -12,4 +12,3 @@
 **Redux Setup:**
 
 ``npm install --save redux react-redux``
-
