@@ -14,3 +14,6 @@
 ``npm install --save redux react-redux``
 
 <img width="550" alt="Screen Shot" src="https://user-images.githubusercontent.com/34965292/97824227-340b4200-1c70-11eb-8045-8f93eeb1c535.png">
+
+**Redux Thunk (production):**
+``npm install redux-thunk``
