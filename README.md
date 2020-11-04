@@ -17,3 +17,8 @@
 
 **Redux Thunk (production):**
 ``npm install redux-thunk``
+
+**Moxios Setup:**
+
+``npm i axios``
+``npm i --save-dev moxios``
