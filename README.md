@@ -22,3 +22,5 @@
 
 ``npm i axios``
 ``npm i --save-dev moxios``
+
+<img width="550" alt="Screen Shot 2020-11-03 at 9 55 42 PM" src="https://user-images.githubusercontent.com/34965292/98074501-67400380-1e1f-11eb-84ff-ee2c711c22c3.png">
