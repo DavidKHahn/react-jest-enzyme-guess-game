@@ -2,10 +2,32 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { guessWord } from './actions';
 
+export class UnconnectedInput extends Component {
+    /**
+     * @method constructor
+     * @param {object} props - Component props.
+     * @returns {undefined}
+     */
+    constructor(props) {
+        super(props);
 
-class Input extends Component {
+        // initialize state
+        this.state = {currentGuess: null}
+
+        // bind this for submitGuessedWord
+        this.submitGuessedWord = this.submitGuessedWord.bind(this);
+    }
+    submitGuessedWord(evt) {
+            evt.preventDefault();
+            const guessedWord = this.state.currentGuess;
+
+            if(guessedWord && guessWord.length > 0) {
+                this.props.guessWord(guessedWord);
+                this.setState({ currentGuess: '' });
+            }
+    }
     render() {
-        const contents = this.props.success
+        const contents = this.props.success || this.props.gaveUp
         ? null : (
             <form className="form-inline">
                 <input
@@ -13,10 +35,13 @@ class Input extends Component {
                 className="mb-2 mx-sm-3"
                 type="text"
                 placeholder="enter guess"
+                value={this.state.currentGuess}
+                onChange={(evt) => this.setState({ currentGuess: evt.target.value })}
                 />
                 <button
                 data-test="submit-button"
                 className="btn btn-primary mb-2"
+                onClick={this.submitGuessedWord}
                 type="submit">
                     Submit
                 </button>
@@ -32,4 +57,4 @@ const mapStateToProps = ({ success }) => {
     return { success };
 }
 
-export default connect(mapStateToProps, { guessWord })(Input);
+export default connect(mapStateToProps, { guessWord })(UnconnectedInput);

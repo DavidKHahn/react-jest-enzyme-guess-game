@@ -59,5 +59,4 @@ test('`getSecretWord` runs on App mount', () => {
   const getSecretWordCallCount = getSecretWordMock.mock.calls.length;
 
   expect(getSecretWordCallCount).toBe(1);
-
-})
+});
