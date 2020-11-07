@@ -65,5 +65,5 @@ describe('if there are words guessed', () => {
         const expectedSet = new Set(guessedWords.map((word, index) => (index + 1).toString()));
         expect(indexTextSet).toEqual(expectedSet);
     });
-    // END: Chellenge #1 - Number of Guesses
+    // END: Challenge #1 - Number of Guesses
 });
