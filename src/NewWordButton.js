@@ -15,7 +15,8 @@ const NewWordButton = (props) => {
             <button
                 data-test="component-new-word-button"
                 className="btn btn-primary spacer-bottom"
-                onClick={props.resetAction}>
+                onClick={props.resetAction}
+                >
                     New word
             </button>
         );
