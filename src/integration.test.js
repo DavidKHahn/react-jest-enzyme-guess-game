@@ -101,7 +101,6 @@ describe('setUserSecretWord action dispatcher', () => {
     // involves the setUserSecretWord action creator and two reducers
     let store;
     let newState;
-
     // this represents the word the user entered
     const userSecretWord = 'lunch';
 
