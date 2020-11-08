@@ -6,6 +6,8 @@ export const actionTypes = {
     CORRECT_GUESS: 'CORRECT_GUESS',
     GUESS_WORD: 'GUESS_WORD',
     SET_SECRET_WORD: 'SET_SECRET_WORD',
+    SERVER_ERROR: 'SERVER_ERROR',
+    GIVE_UP: 'GIVE_UP',
 };
 
 /**
@@ -40,5 +42,11 @@ export const getSecretWord = () => {
                     payload: response.data
                 });
             }))
+            // Challenge #5: Server Error
+            // note: axios rejects promise if status is 4xx or 5xx
+            .catch(error => {
+                dispatch({ type: actionTypes.SERVER_ERROR });
+            })
+            // END: Challenge #5: Server Error
     }
 }

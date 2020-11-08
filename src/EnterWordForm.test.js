@@ -4,7 +4,6 @@ import React from 'react';
 import { checkProps, findByTestAttr } from '../test/testUtils';
 import EnterWordForm from './EnterWordForm';
 
-
 const defaultProps = { formAction: () => {} };
 
 /**
